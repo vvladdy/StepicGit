@@ -3,6 +3,7 @@ from queue import Queue
 from concurrent.futures import ThreadPoolExecutor
 import requests
 from pytube import YouTube, Playlist
+import re
 from pprint import pprint
 
 TIMEOUT = 20
@@ -13,7 +14,8 @@ def process(url):
     except FileExistsError as error:
         print('CATALOG EXIST', error)
     yt = YouTube(url)
-    title = yt.title.split('|')[0].replace('.', '_').rstrip()
+    title = re.sub(r'[^\w\s]', '', yt.title)
+    # title = yt.title.split('|')[0].replace('.', '_').rstrip()
     info = {
         'url': url,
         'title': title,
