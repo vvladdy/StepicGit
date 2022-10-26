@@ -19,6 +19,8 @@ from bs4 import BeautifulSoup
 queue = Queue()
 INFO_ARR = []
 TIMEOUT = 20
+NUMBER_ARR = []
+
 
 HEADERS = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
@@ -100,6 +102,78 @@ def activation_in_olx_cab(queue: Queue):
         driver.close()
         driver.quit()
 
+def pars_number(queue:Queue, page):
+    driver_service = Service(
+        executable_path='c:/Users/User/PycharmProjects/chromedriver.exe'
+    )
+
+    driver = webdriver.Chrome(
+        service=driver_service
+    )
+    driver.maximize_window()
+
+    while queue.qsize() > 0:
+        single_url = queue.get()
+        print('WORKING ON: ', single_url)
+
+        try:
+            driver.get(single_url)
+            time.sleep(4)
+            try:
+                time.sleep(3)
+                driver.execute_script("window.scrollTo(0, 300)")
+
+                time.sleep(4)
+
+                phone_button = driver.find_element(By.XPATH,
+                        '//*[@id="root"]/div[1]/div[3]/div[3]/div[2]/div['
+                        '1]/div[4]/div/button[1]')
+                phone_button.click()
+                time.sleep(3)
+
+                phone_number = driver.find_element(By.XPATH,
+                '/html/body/div/div[1]/div[3]/div[3]/div[2]/div[1]/div[4]/div[1]/button[1]/span/a')
+                phone_number_text = phone_number.text
+                if phone_number_text == None:
+                    phone_number_text = 'Нет номера'
+                else:
+                    phone_number_text = phone_number.text
+                time.sleep(1)
+                print(phone_number_text)
+
+                title = driver.find_element(By.XPATH,
+                '//*[@id="root"]/div[1]/div[3]/div[3]/div[1]/div[2]/div[2]/h1')
+                title_text = title.text
+                print(title_text)
+
+                price = driver.find_element(By.XPATH,
+                '//*[@id="root"]/div[1]/div[3]/div[3]/div[1]/div[2]/div[3]/h3')
+                price_text = price.text
+                print(price_text)
+
+                NUMBER_ARR.append({
+                    'наименование': title_text,
+                    'стоимость': price_text,
+                    'телефон': phone_number_text,
+                    'ссылка': single_url
+                })
+                with open(
+                        f'C:/Users/User/PycharmProjects/Parsers/venv/Olx/olx_num'
+                        f'{price_text}.json', 'w', encoding='utf-8') as file:
+                    json.dump(NUMBER_ARR, file, indent=4, ensure_ascii=False)
+
+            except Exception as error:
+                print(f'Еще {queue.qsize()} элементов в очереди')
+                print(error)
+        except Exception as error:
+            print(error)
+        finally:
+            driver.close()
+            driver.quit()
+        pars_number(queue, page)
+    with open(f'C:/Users/User/PycharmProjects/Parsers/venv/Olx/olx_num'
+              f'{page}.json', 'w', encoding='utf-8') as file:
+        json.dump(NUMBER_ARR, file, indent=4, ensure_ascii=False)
 
 
 def parsing_urls_category(url, page):
@@ -136,14 +210,12 @@ def parsing_urls_category(url, page):
                 'ссылка на страницу': "https://www.olx.ua/" +
                                     titles[el].get('href'),
             })
-            print(INFO_ARR)
-            # with open(f'C:/Users/User/PycharmProjects/Parsers/venv/Olx/olx'
-            #           f'{page}.json', 'w', encoding="utf-8") as jsonfile:
-            #     json.dump(INFO_ARR, jsonfile, indent=4, ensure_ascii=False)
 
-        with open(f'C:/Users/User/PycharmProjects/Parsers/venv/Olx/olx_x.json',
-                  'w', encoding="utf-8") as jsonfile:
-            json.dump(INFO_ARR, jsonfile, indent=4, ensure_ascii=False)
+            # print(INFO_ARR)
+
+        # with open(f'C:/Users/User/PycharmProjects/Parsers/venv/Olx/olx_x.json',
+        #           'w', encoding="utf-8") as jsonfile:
+        #     json.dump(INFO_ARR, jsonfile, indent=4, ensure_ascii=False)
 
         print(f'Страница {page} готова')
 
@@ -169,25 +241,31 @@ def parsing_number_of_pages(status_code, text_html):
 
 
 def main():
-    # url = 'https://www.olx.ua/d/uslugi/prodazha-biznesa/'
-    url = 'https://www.olx.ua/d/uslugi/oborudovanie/'
-    page_quant = controll_connection(url)
-    page = parsing_number_of_pages(page_quant[0], page_quant[1])
-    last_page = page
+    url = 'https://www.olx.ua/d/uslugi/prodazha-biznesa/'
+    # url = 'https://www.olx.ua/d/uslugi/oborudovanie/'
+    # page_quant = controll_connection(url)
+    # page = parsing_number_of_pages(page_quant[0], page_quant[1])
+    # last_page = page
     # last_page=2
-    print('Всего страниц для парсинга: ', page)
+    # print('Всего страниц для парсинга: ', page)
     parsing_urls_category(url, 1)
-    for i in range(2, last_page+1):
+    # for i in range(2, last_page+1):
         # url = f'https://www.olx.ua/d/uslugi/prodazha-biznesa/?page={i}'
-        url = f'https://www.olx.ua/d/uslugi/oborudovanie/?page={i}'
-        parsing_urls_category(url, i)
-    write_csv(INFO_ARR)
+        # url = f'https://www.olx.ua/d/uslugi/oborudovanie/?page={i}'
+        # parsing_urls_category(url, i)
+    # write_csv(INFO_ARR)
+
+
+    pars_number(queue, 1)
 
 
     # activation_in_olx_cab(queue)
 
 
     # seek_info()
+
+
+
 
     # driver_service = Service(
     #     executable_path='c:/Users/User/PycharmProjects/chromedriver.exe'
