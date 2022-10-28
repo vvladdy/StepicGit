@@ -152,18 +152,17 @@ def pars_number(queue:Queue, page):
                 print(price_text)
 
                 NUMBER_ARR.append({
-                    'наименование': title_text,
-                    'стоимость': price_text,
-                    'телефон': phone_number_text,
+                    'наименование': title_text if title_text else None,
+                    'стоимость': price_text if price_text else None,
+                    'телефон': phone_number_text if phone_number_text else None,
                     'ссылка': single_url
                 })
-                with open(
-                        f'C:/Users/User/PycharmProjects/Parsers/venv/Olx/olx_num'
-                        f'{price_text}.json', 'w', encoding='utf-8') as file:
-                    json.dump(NUMBER_ARR, file, indent=4, ensure_ascii=False)
-
-            except Exception as error:
+                # with open(
+                #         f'C:/Users/User/PycharmProjects/Parsers/venv/Olx/olx_num'
+                #         f'{price_text}.json', 'w', encoding='utf-8') as file:
+                #     json.dump(NUMBER_ARR, file, indent=4, ensure_ascii=False)
                 print(f'Еще {queue.qsize()} элементов в очереди')
+            except Exception as error:
                 print(error)
         except Exception as error:
             print(error)
@@ -242,29 +241,22 @@ def parsing_number_of_pages(status_code, text_html):
 
 def main():
     url = 'https://www.olx.ua/d/uslugi/prodazha-biznesa/'
-    # url = 'https://www.olx.ua/d/uslugi/oborudovanie/'
-    # page_quant = controll_connection(url)
-    # page = parsing_number_of_pages(page_quant[0], page_quant[1])
-    # last_page = page
-    # last_page=2
-    # print('Всего страниц для парсинга: ', page)
+    page_quant = controll_connection(url)
+    page = parsing_number_of_pages(page_quant[0], page_quant[1])
+    last_page = page
+    last_page=2
+    print('Всего страниц для парсинга: ', page)
     parsing_urls_category(url, 1)
-    # for i in range(2, last_page+1):
-        # url = f'https://www.olx.ua/d/uslugi/prodazha-biznesa/?page={i}'
-        # url = f'https://www.olx.ua/d/uslugi/oborudovanie/?page={i}'
-        # parsing_urls_category(url, i)
-    # write_csv(INFO_ARR)
+    for i in range(2, last_page+1):
+        url = f'https://www.olx.ua/d/uslugi/prodazha-biznesa/?page={i}'
+        parsing_urls_category(url, i)
+    write_csv(INFO_ARR)
 
 
     pars_number(queue, 1)
 
 
     # activation_in_olx_cab(queue)
-
-
-    # seek_info()
-
-
 
 
     # driver_service = Service(
