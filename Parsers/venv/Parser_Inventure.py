@@ -73,6 +73,8 @@ def connection(url, page: int):
         with open(f'info{page}.json', 'w', encoding='utf-8') as file:
             json.dump(info, file, indent=4, ensure_ascii=False)
 
+
+
     print('Парсинг страницы {} окончен'.format(page))
     time.sleep(3)
 

@@ -7,6 +7,7 @@ import MyInfo as secret
 
 INFO = []
 user = UserAgent().random
+link_arr = []
 
 LOGIN = secret.LOGIN_frilance
 PASSWORD = secret.PASSWORD_freelance
@@ -63,8 +64,15 @@ def parsing():
             # descript = ' '.join(description[0].text.rstrip().split('\n'))
             # title = ' '.join(descript.split(' ')[:10]).strip()
 
+
+            for link in range(len(links)):
+                for el in links[link].get('href').split('/'):
+                    if el == 'project':
+                        link_arr.append(links[link].get('href'))
+                        # print(links[link].get('href'))
+
             for el in range(len(block)):
-                INFO.append([
+                INFO.append(
                     {
                         'title': (' '.join(
                             (' '.join(description[el].text.rstrip().split('\n'))
@@ -73,9 +81,9 @@ def parsing():
                             (' '.join(description[el].text.rstrip().split('\n'))
                              ).split(' ')[10:-5]).replace('Приветствую', ''
                                                          ).strip(' +')),
-                        'link': links[el].get('href')
+                        'link': link_arr[el]#links[el].get('href')
                     }
-                ])
+                )
         return INFO
 
 def writejson():
