@@ -69,9 +69,16 @@ class AutoParser:
                         public_dates[link].text.strip(' ')))
 
 
-            for link in range(len(links)):
+            soup = BeautifulSoup(responce.content, 'html.parser')
+            links1 = soup.select('.head-ticket div a')
+
+            public_dates = soup.select('.footer_ticket span span')
+
+            for link in range(len(links1)):
+                print(links1[link].get('href').split('/'))
                 for el in links[link].get('href').split('/'):
                     if el == 'newauto':
+                        print(links[link].get('href'))
                         self.queue_new_auto.put((
                             links[link].get('href'),
                             public_dates[link].text.strip(' ')))
@@ -185,17 +192,18 @@ class AutoParser:
         pass
 
     def get_number_new_car(self):
-        while self.queue_old_auto.qsize() > 0:
-            print(f'Нужно обработать {self.queue_old_auto.qsize()} ссылок')
-            url = self.queue_old_auto.get()
-            print('WORKIN ON: ', url)
+        print('NEW AUTO', self.queue_new_auto.qsize())
+        while self.queue_new_auto.qsize() > 0:
+            print(f'Нужно обработать {self.queue_new_auto.qsize()} ссылок')
+            date = self.queue_new_auto.get()
+            self.url = date[0]
+            print(self.url)
+            self.public_date = date[1]
+            print('WORKIN ON: ', self.url, self.public_date,
+                  self.queue_new_auto.qsize())
             with requests.Session() as session:
-                responce = session.get(url, headers=self.HEADERS,
+                responce = session.get(self.url, headers=self.HEADERS,
                                        timeout=self.TIMEOUT)
-
-
-                #url_new_car = 'https://auto.ria.com/uk/newauto/auto-hyundai-tucson
-                # -1893570.html'
 
                 soup_new = BeautifulSoup(responce.text, 'lxml')
 
@@ -207,17 +215,47 @@ class AutoParser:
                     print(json_text)
 
                     headers_new = {
-                        "accept": "*/*",
-                        "accept-language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
-                        "cache-control": "no-cache",
-                        "content-type": "application/json;charset=UTF-8",
-                        "pragma": "no-cache",
-                        "sec-ch-ua": '"Chromium";v="106", "Google Chrome";v="106", "Not;A=Brand";v="99"',
-                        "sec-ch-ua-mobile": "?0",
-                        "sec-ch-ua-platform": "Windows",
-                        "sec-fetch-dest": "empty",
-                        "sec-fetch-mode": "cors",
-                        "sec-fetch-site": "same-origin",
+
+                        "content-type": "application/json",
+                        "cookie": "__utmz=79960839.1663188796.1.1.utmcsr=(direct)|utmccn=("
+                                  "direct)|utmcmd=(none); _gcl_au=1.1.680757332.1663188796; "
+                                  "_fbp=fb.1.1663188797468.674172798; ui=8a0e3d79413f200b; "
+                                  "__gads=ID=7f1a6e9bfd29383b:T=1663188798:S"
+                                  "=ALNI_MbOG0v4pK2iexTt0sqtDy-t-de1VQ; "
+                                  "_gid=GA1.2.381724096.1666815392; "
+                                  "_ga=GA1.3.1725317400.1663188796; ipp=20; "
+                                  "__utmc=79960839; showNewFeatures=7; extendedSearch=1; "
+                                  "showNewFinalPage=1; showNewNextAdvertisement=-10; "
+                                  "PHPLOGINSESSID=ns116fjf2scoms9tt11j0ia4b5; "
+                                  "project_id=18; "
+                                  "project_base_url=https%3A%2F%2Fchat.ria.com%2Fiframe-ria"
+                                  "-login; slonik_utm_campaign=; slonik_utm_medium=; "
+                                  "slonik_utm_source=; test_new_features=664; "
+                                  "advanced_search_test=42; "
+                                  "PHPSESSID=eyJ3ZWJTZXNzaW9uQXZhaWxhYmxlIjp0cnVlLCJ3ZWJQZX"
+                                  "Jzb25JZCI6MCwid2ViQ2xpZW50SWQiOjIzMTYxODkwNDksIndlYkNsaWVu"
+                                  "dENvZGUiOjEwOTQ2NTYwMTEsIndlYkNsaWVudENvb2tpZSI6IjhhMGUzZD"
+                                  "c5NDEzZjIwMGIiLCJfZXhwaXJlIjoxNjY3MDMzMjk3NzY3LCJfbWF4QWdl"
+                                  "Ijo4NjQwMDAwMH0=; informerIndex=1; "
+                                  "__utma=1.1725317400.1663188796.1666947011.1666947011.1; "
+                                  "__utmc=1; "
+                                  "__utmz=1.1666947011.1.1.utmcsr=auto.ria.com|utmccn=("
+                                  "referral)|utmcmd=referral|utmcct=/uk/car/mercedes-benz/; "
+                                  "_ga_V4H4L9D6JB=GS1.1.1666947011.1.0.1666947011.0.0.0; "
+                                  "_ga_QLXD2N77X6=GS1.1.1666947011.1.0.1666947011.60.0.0; "
+                                  "_clck=mrp956|1|f63|0; "
+                                  "__utma=79960839.1725317400.1663188796.1666946896"
+                                  ".1666985497.13; PHPSESSID=N2xce2eKu3_0VOH1dwEkz6efeZsZxco8;"
+                                  " __gpi=UID=00000b3cf3c83e03:T=1663188798:RT=1666985498:S"
+                                  "=ALNI_Mbv7zT5KMk9LauSn_LHjgQ_GN_jJg; "
+                                  "sid=w7AhWfzzcgLV5mzhZXWwJA6spiCJCGqe"
+                                  "+00vr9jiAxABgQpfqy5D4FXcsg76daNMAZcqMzWawjmuQacRQft"
+                                  "/+Wbf5JXyq5DQ5V85znSLs2r4xqAESCDhBbA+dpLi2i7X; "
+                                  "AMP_TOKEN=%24NOT_FOUND; _ga=GA1.2.1725317400.1663188796;"
+                                  " _dc_gtm_UA-110070444-1=1; _gat_newauto_commercial=1;"
+                                  " _gid=GA1.3.381724096.1666815392; _gat=1; "
+                                  "_clsk=15wfs9|1666993203034|2|1|e.clarity.ms/collect; "
+                                  "_ga_QE9NBY8W7X=GS1.1.1666993195.3.1.1666993207.0.0.0"
                     }
 
                     new_car_post_url = 'https://auto.ria.com/newauto/api/auth/dc'
@@ -226,17 +264,19 @@ class AutoParser:
                         "adv_id": 1891271, "phone_id": f"{json_text}", "platform": "desktop"
                     }
 
-                    response = requests.get(new_car_post_url,
-                                            data=params, headers=headers_new)
+                    response = requests.post(new_car_post_url,
+                                            params=params, headers=headers_new)
                     print('New car number', response.status_code)
-                    print(response.text)
+                    self.phone_number_new_car = response.json()[
+                        'phone_formatted']
+                    print(self.phone_number_new_car)
                 except Exception:
                     print('Such does not exist')
 
     def main(self):
         url = 'https://auto.ria.com/uk/car/' + self.model
         self.parsing_url_for_pages(url)
-        handle_page = 10
+        handle_page = 2
         for page in range(1, handle_page):#int(self.pages)+1):
             print(f'Парсим страницу {page} из {self.pages} страниц')
             url_from_page = 'https://auto.ria.com/uk/car/' + self.model + \
@@ -244,12 +284,13 @@ class AutoParser:
             self.parsing_for_links(url_from_page)
             time.sleep(1)
             self.get_number_old_car()
+            self.get_number_new_car()
             self.write_json()
 
 
 if __name__ == '__main__':
-    car = AutoParser('Mercedes-Benz')
-    # car.main()
+    car = AutoParser('citroen')
+    car.main()
     car.json_to_excel(f'C:/Users/User/PycharmProjects/Parsers/venv'
                         f'/autoriaPars{(car.model)}.json')
 
