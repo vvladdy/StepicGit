@@ -1,0 +1,188 @@
+[2022-10-30 22:37:11,251] ERROR parser 24860 178 Cannot resolve keyword 'car_info_model' into field. Choices are: car_info_marka, car_info_marka_id, currency, id, miles, phone, price, public_date, title, url
+[2022-10-30 22:37:12,255] ERROR parser 24860 178 Cannot resolve keyword 'car_info_model' into field. Choices are: car_info_marka, car_info_marka_id, currency, id, miles, phone, price, public_date, title, url
+[2022-10-30 22:37:13,167] ERROR parser 24860 178 Cannot resolve keyword 'car_info_model' into field. Choices are: car_info_marka, car_info_marka_id, currency, id, miles, phone, price, public_date, title, url
+[2022-10-30 22:37:14,046] ERROR parser 24860 178 Cannot resolve keyword 'car_info_model' into field. Choices are: car_info_marka, car_info_marka_id, currency, id, miles, phone, price, public_date, title, url
+[2022-10-30 22:39:57,847] ERROR parser 33256 178 ['«начение У6.10.2022Ф имеет неверный формат. ќно должно быть в формате YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ].']
+[2022-10-30 22:39:58,761] ERROR parser 33256 178 ['«начение У29.10.2022Ф имеет неверный формат. ќно должно быть в формате YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ].']
+[2022-10-30 22:39:59,665] ERROR parser 33256 178 ['«начение У3.10.2022Ф имеет неверный формат. ќно должно быть в формате YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ].']
+[2022-10-30 22:40:00,581] ERROR parser 33256 178 ['«начение У29.10.2022Ф имеет неверный формат. ќно должно быть в формате YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ].']
+[2022-10-30 22:41:26,845] ERROR parser 34508 178 ['«начение У6.10.2022Ф имеет неверный формат. ќно должно быть в формате YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ].']
+[2022-10-30 22:41:27,731] ERROR parser 34508 178 ['«начение У29.10.2022Ф имеет неверный формат. ќно должно быть в формате YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ].']
+[2022-10-30 22:41:29,775] ERROR parser 34508 178 ['«начение У3.10.2022Ф имеет неверный формат. ќно должно быть в формате YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ].']
+[2022-10-30 22:41:30,684] ERROR parser 34508 178 ['«начение У29.10.2022Ф имеет неверный формат. ќно должно быть в формате YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ].']
+[2022-10-30 22:43:45,218] ERROR parser 30536 178 no such column: autoriaadmin_car.miles
+[2022-10-30 22:43:46,486] ERROR parser 30536 178 no such column: autoriaadmin_car.miles
+[2022-10-30 22:43:47,310] ERROR parser 30536 178 no such column: autoriaadmin_car.miles
+[2022-10-30 22:43:48,204] ERROR parser 30536 178 no such column: autoriaadmin_car.miles
+[2022-10-30 23:01:09,354] ERROR parser 27372 140 'formattedPhoneNumber'
+[2022-10-30 23:01:10,445] ERROR parser 27372 140 'formattedPhoneNumber'
+[2022-10-30 23:01:46,355] ERROR parser 27372 140 'formattedPhoneNumber'
+[2022-10-30 23:03:17,740] ERROR parser 27372 140 'formattedPhoneNumber'
+[2022-10-30 23:03:18,620] ERROR parser 27372 140 'formattedPhoneNumber'
+[2022-10-30 23:13:09,756] ERROR parser 12388 47 invalid literal for int() with base 10: '1 106'
+[2022-10-30 23:37:29,047] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:30,007] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:31,592] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:32,692] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:33,563] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:34,437] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:35,404] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:36,382] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:37,296] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:42,552] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:43,526] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:44,604] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:45,496] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:46,305] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:47,168] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:47,981] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:48,856] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:50,202] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:54,124] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:55,076] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:55,933] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:56,974] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:57,979] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:58,938] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:37:59,756] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:00,571] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:01,738] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:05,857] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:06,964] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:07,818] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:08,646] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:09,660] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:10,870] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:11,833] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:12,704] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:13,623] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:17,799] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:18,921] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:20,044] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:21,456] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:22,294] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:23,154] ERROR parser 34180 143 'formattedPhoneNumber'
+[2022-10-30 23:38:23,159] ERROR parser 34180 170 'formattedPhoneNumber'
+[2022-10-30 23:38:24,360] ERROR parser 34180 143 'formattedPhoneNumber'
+[2022-10-30 23:38:24,365] ERROR parser 34180 170 'formattedPhoneNumber'
+[2022-10-30 23:38:25,223] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:26,180] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:30,252] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:31,183] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:32,424] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:33,501] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:34,351] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:35,273] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:36,476] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:40,657] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:41,501] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:42,697] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:43,705] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:44,500] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:45,461] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:46,472] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:51,145] ERROR parser 34180 143 'formattedPhoneNumber'
+[2022-10-30 23:38:51,150] ERROR parser 34180 170 'formattedPhoneNumber'
+[2022-10-30 23:38:52,036] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:53,203] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:54,220] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:55,517] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:38:59,785] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:00,704] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:01,707] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:02,767] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:03,760] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:04,602] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:05,441] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:06,276] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:10,607] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:11,893] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:12,810] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:13,669] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:14,517] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:15,508] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:16,611] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:17,524] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:19,190] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:23,193] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:24,118] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:28,782] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:31,045] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:31,905] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:33,012] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:33,928] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:34,878] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:35,821] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:36,671] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:38,290] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:44,508] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:45,687] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:47,389] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:48,574] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:49,979] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:51,305] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:57,019] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:39:58,155] ERROR parser 34180 143 'formattedPhoneNumber'
+[2022-10-30 23:39:58,158] ERROR parser 34180 170 'formattedPhoneNumber'
+[2022-10-30 23:39:59,196] ERROR parser 34180 143 'formattedPhoneNumber'
+[2022-10-30 23:39:59,204] ERROR parser 34180 170 'formattedPhoneNumber'
+[2022-10-30 23:40:00,542] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:06,438] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:07,492] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:08,929] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:10,204] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:11,211] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:13,275] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:14,879] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:15,952] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:17,055] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:22,936] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:24,060] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:25,299] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:26,312] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:27,497] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:29,244] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:30,438] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:37,236] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:38,581] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:40,114] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:41,193] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:42,575] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:44,029] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:46,305] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:47,580] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:48,661] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:49,630] ERROR parser 34180 47 invalid literal for int() with base 10: '1 106'
+[2022-10-30 23:40:53,629] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:54,557] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:55,347] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:56,155] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:57,218] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:58,152] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:40:59,160] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:00,046] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:00,933] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:06,156] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:07,040] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:08,490] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:09,317] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:10,137] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:11,031] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:12,244] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:13,027] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:14,482] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:18,582] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:19,602] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:20,394] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:21,224] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:22,263] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:23,086] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:24,420] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:25,532] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:26,320] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:30,349] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:31,189] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:32,074] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:32,859] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:37,096] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
+[2022-10-30 23:41:38,032] ERROR parser 34180 185 Direct assignment to the forward side of a many-to-many set is prohibited. Use car_info_model.set() instead.
