@@ -213,21 +213,34 @@ for k in (k for d in listfordict for k in d):
 print(super_dict)
 
 def print_products(*args):
-    count = 0
-    tab = []
+    tab1 = []
+    tab = set()
     for i in args:
-        if type(i) == str and i != '':
-            tab.append(i)
-            if len(tab) == 0:
-                print('Нет продуктов')
-            else:
-                count += 1
-                print (f'{count}) {i}')
+        if type(i) is str and i != '':
+            tab1.append(i)
+        else:
+            tab.add('Нет продуктов')
+    if len(tab1) == 0:
+        print(*tab)
+    else:
+        for c, i in enumerate(tab1):
+            print(f'{c+1}) {i}')
 
+# или
+
+def print_products1(*args):
+    count = 0
+    for i in args:
+        if type(i) is str and i:
+            count += 1
+            print(f'{count}) {i}')
+    if count == 0:
+        print('Нет продуктов')
 
 print_products('Бананы', [1, 2], ('Stepic',), 'Яблоки', '', 'Макароны',
-                    5, True)
-print_products('')
+                   5, True)
+
+print_products1([4], {}, 1, 2, {'Beegeek'}, '')
 
 def my_kwards_func(**kwargs):
     for k, v in sorted(kwargs.items()):
